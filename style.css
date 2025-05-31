@@ -86,7 +86,7 @@ nav img {
 .hero-btn {
     display: inline-block;
     padding: 12px 35px;
-    background: #f44336;
+    background: #64b5f6; /* light blue */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -95,7 +95,7 @@ nav img {
 }
 
 .hero-btn:hover {
-    background: #d32f2f;
+    background: #1976d2; /* deeper blue */
     transform: scale(1.05);
 }
 
@@ -179,7 +179,7 @@ nav img {
 .footer h4 {
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #f44336;
+    color: #1976d2; /* changed from red to blue */
 }
 
 .footer p {
@@ -473,13 +473,14 @@ h3 {
 }
 
 .red-btn {
-    border: 1px solid #f44336;
+    border: 1px solid #64b5f6; /* light blue border */
     background: transparent;
-    color: #f44336;
+    color: #64b5f6; /* light blue text */
 }
 
 .red-btn:hover {
     color: #fff;
+    background: #64b5f6; /* light blue background */
 }
 
 .blog-content {
@@ -813,7 +814,7 @@ nav .fa-times {
 .donation-form button {
     width: 100%;
     padding: 12px;
-    background: #f44336;
+    background: #64b5f6; /* light blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -823,7 +824,7 @@ nav .fa-times {
 }
 
 .donation-form button:hover {
-    background: #d32f2f;
+    background: #1976d2; /* deeper blue */
 }
 
 .footer-container {
@@ -843,7 +844,7 @@ nav .fa-times {
 .footer-col h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #f44336;
+    color: #1976d2; /* changed from red to blue */
 }
 
 .footer-col ul {
@@ -862,7 +863,7 @@ nav .fa-times {
 }
 
 .footer-col ul li a:hover {
-    color: #f44336;
+    color: #1976d2; /* changed from red to blue */
 }
 
 .social-icons a {
@@ -873,7 +874,7 @@ nav .fa-times {
 }
 
 .social-icons a:hover {
-    color: #f44336;
+    color: #1976d2; /* changed from red to blue */
 }
 
 .footer-bottom {
@@ -917,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 .donation-callout .hero-btn {
     padding: 12px 35px;
     font-size: 1rem;
-    background: #f44336;
+    background: #64b5f6; /* light blue */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -926,5 +927,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .donation-callout .hero-btn:hover {
-    background: #d32f2f;
+    background: #1976d2; /* deeper blue */
 }
