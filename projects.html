@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="eduford_img/logo.png" alt="University Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donations.html">Donate</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Projects</h1>
+</section>
+
+<section class="projects">
+    <h1>Featured Projects</h1>
+    <div class="row">
+        <div class="project-col">
+            <img src="eduford_img/project1.jpg" alt="Project A">
+            <h3>Project A</h3>
+            <p>Details about Project A.</p>
+        </div>
+        <div class="project-col">
+            <img src="eduford_img/project2.jpg" alt="Project B">
+            <h3>Project B</h3>
+            <p>Details about Project B.</p>
+        </div>
+        <div class="project-col">
+            <img src="eduford_img/project3.jpg" alt="Project C">
+            <h3>Project C</h3>
+            <p>Details about Project C.</p>
+        </div>
+        <!-- New images -->
+        <div class="project-col">
+            <img src="eduford_img/project4.jpg" alt="Project D">
+            <h3>Project D</h3>
+            <p>Details about Project D.</p>
+        </div>
+        <div class="project-col">
+            <img src="eduford_img/project5.jpg" alt="Project E">
+            <h3>Project E</h3>
+            <p>Details about Project E.</p>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <p>We are committed to providing world-class education and fostering a community of learners and innovators.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Email: info@university.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 University Lane, City, Country</p>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2023 University. All rights reserved.</p>
+</section>
+
+<script>
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = document.querySelector(".fa-bars");
+    const closeIcon = document.querySelector(".fa-times");
+
+    function showMenu() {
+        navLinks.style.right = "0"; // Show the header menu
+        menuIcon.classList.add("hidden"); // Hide the menu button
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-100%"; // Hide the header menu
+        menuIcon.classList.remove("hidden"); // Show the menu button
+    }
+
+    menuIcon.addEventListener("click", showMenu);
+    closeIcon.addEventListener("click", hideMenu);
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="eduford_img/logo.png" alt="University Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donations.html">Donate</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Welcome to Our University</h1>
+        <p>Empowering students to achieve their dreams through education and innovation.</p>
+        <a href="projects.html" class="hero-btn">Explore Projects</a>
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="about-row">
+        <div class="about-image">
+            <img src="eduford_img/about1.jpg" alt="About Image 1">
+        </div>
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>We are committed to providing world-class education and fostering a community of learners and innovators. Our mission is to empower students to achieve their dreams through education and innovation.</p>
+        </div>
+    </div>
+    <div class="about-row">
+        <div class="about-image">
+            <img src="eduford_img/about2.jpg" alt="About Image 2">
+        </div>
+        <div class="about-text">
+            <h2>Our Vision</h2>
+            <p>Our vision is to create a global community of learners who are equipped with the skills and knowledge to make a positive impact on the world. We strive to inspire innovation and creativity in every student.</p>
+        </div>
+    </div>
+</section>
+
+<section class="donation-callout">
+    <h2>Make a Difference Today</h2>
+    <p>Your contributions help us provide quality education and support innovation. Every donation counts!</p>
+    <a href="donations.html" class="hero-btn">Donate Now</a>
+</section>
+
+<section class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <p>We are committed to providing world-class education and fostering a community of learners and innovators.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Email: info@university.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 University Lane, City, Country</p>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2023 University. All rights reserved.</p>
+</section>
+
+<script>
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = document.querySelector(".fa-bars");
+    const closeIcon = document.querySelector(".fa-times");
+
+    function showMenu() {
+        navLinks.style.right = "0"; // Show the header menu
+        menuIcon.classList.add("hidden"); // Hide the menu button
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-100%"; // Hide the header menu
+        menuIcon.classList.remove("hidden"); // Show the menu button
+    }
+
+    menuIcon.addEventListener("click", showMenu);
+    closeIcon.addEventListener("click", hideMenu);
+</script>
+</body>
+</html>
