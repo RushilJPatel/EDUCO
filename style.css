@@ -14,7 +14,7 @@ body {
 
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(eduford_img/banner.png) no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(eduford_img/skibs.jpg) no-repeat center center/cover;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ nav img {
 }
 
 .nav-links ul li a:hover {
-    color: #f44336; /* Only change text color on hover */
+    color: #64b5f6; /* Only change text color on hover */
     background: none; /* Ensure no background appears */
 }
 
@@ -91,7 +91,7 @@ nav img {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
-    transition: background 0.3s, transform 0.3s;
+    transition: 0.3s, transform 0.3s;
 }
 
 .hero-btn:hover {
@@ -118,7 +118,7 @@ nav img {
 
 .about-row {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* Make children the same height */
     margin-bottom: 40px;
     gap: 20px;
 }
@@ -129,16 +129,26 @@ nav img {
 
 .about-image {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-image img {
     width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
 }
 
@@ -158,12 +168,17 @@ nav img {
     .about-row {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
-
-    .about-row.reverse {
-        flex-direction: column;
+    .about-image,
+    .about-text {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
-
+    .about-image img {
+        max-width: 250px;
+    }
     .about-text {
         text-align: center;
     }
@@ -179,7 +194,7 @@ nav img {
 .footer h4 {
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #1976d2; /* changed from red to blue */
+    color: #64b5f6;
 }
 
 .footer p {
@@ -228,7 +243,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #64b5f6;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -262,6 +277,8 @@ p {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4%;
 }
 
 .course-col {
@@ -405,7 +422,7 @@ h3 {
 }
 
 .testimonial-col .fa {
-    color: #f44336;
+    color: #64b5f6;
 }
 
 .row-big {
@@ -428,7 +445,7 @@ h3 {
 }
 
 .icons .fa {
-    color: #f44336;
+    color: #64b5f6;
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
@@ -437,7 +454,7 @@ h3 {
 .sub-header {
     height: 50vh; /* Covers the top half of the page */
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(eduford_img/background.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(eduford_img/background.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -451,7 +468,7 @@ h3 {
 .sub-header h1 {
     margin-top: 0; /* Center the heading vertically */
     font-size: 3rem; /* Adjust font size for better visibility */
-    color: #f44336;
+    color: #64b5f6;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -513,7 +530,7 @@ h3 {
 }
 
 .blog-right h3 {
-    background: #f44336;
+    background: #64b5f6;
     color: #fff;
     padding: 7px 0;
     font-size: 16px;
@@ -592,7 +609,7 @@ h3 {
 
 .contact-col div .fa {
     font-size: 28px;
-    color: #f44336;
+    color: #64b5f6;
     margin: 10px;
     margin-right: 30px;
 }
@@ -653,7 +670,7 @@ nav .fa {
 }
 
 #navLinks ul li a:hover {
-    color: #f44336;
+    color: #64b5f6;
 }
 
 nav .fa-bars {
@@ -727,19 +744,25 @@ nav .fa-times {
 }
 
 .project-col {
-    flex-basis: 30%;
+    flex-basis: 48%;
     background: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden; /* Ensures content stays within the card */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .project-col img {
     width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+    height: 420px;
+    max-height: 70vh;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
@@ -747,7 +770,7 @@ nav .fa-times {
 .project-col h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #f44336;
+    color: #64b5f6;
 }
 
 .project-col p {
@@ -773,6 +796,7 @@ nav .fa-times {
 
     .project-col {
         flex-basis: 100%;
+        width: 100%;
     }
 }
 
@@ -820,7 +844,7 @@ nav .fa-times {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .donation-form button:hover {
@@ -844,7 +868,7 @@ nav .fa-times {
 .footer-col h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #1976d2; /* changed from red to blue */
+    color: #64b5f6;
 }
 
 .footer-col ul {
@@ -863,7 +887,7 @@ nav .fa-times {
 }
 
 .footer-col ul li a:hover {
-    color: #1976d2; /* changed from red to blue */
+    color: #64b5f6;
 }
 
 .social-icons a {
@@ -874,7 +898,7 @@ nav .fa-times {
 }
 
 .social-icons a:hover {
-    color: #1976d2; /* changed from red to blue */
+    color: #64b5f6;
 }
 
 .footer-bottom {
@@ -892,7 +916,7 @@ h1, h2, h3, h4, h5, h6 {
 .donation-callout {
     text-align: center;
     padding: 60px 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('eduford_img/background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('eduford_img/skibidi.jpg') no-repeat center center/cover;
     color: #fff;
     margin: 30px auto;
     border-radius: 10px;
@@ -923,9 +947,94 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .donation-callout .hero-btn:hover {
     background: #1976d2; /* deeper blue */
+}
+
+.project-bullets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.project-bullets ul {
+    text-align: left;
+    margin: 0;
+    padding-left: 20px;
+    max-width: 350px;
+}
+
+.upcoming-projects {
+    margin: 40px auto 60px auto;
+    padding: 40px 10%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    max-width: 900px;
+    text-align: center;
+}
+
+.upcoming-projects h2 {
+    color: #1976d2;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.upcoming-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.upcoming-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(100,181,246,0.08);
+    padding: 20px 30px;
+    min-width: 220px;
+    max-width: 320px;
+    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upcoming-title {
+    font-weight: 600;
+    color: #64b5f6;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+.upcoming-item p {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .upcoming-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .upcoming-item {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        text-align: center;
+        align-items: center;
+    }
 }
